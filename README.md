@@ -1,1 +1,2 @@
-# tango_with_django_project
+# Rango
+## Based on the Tango with Django textbook
