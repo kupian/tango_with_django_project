@@ -1,10 +1,10 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
-MAX_NAME_LENGTH = 128
-
 # Create your models here.
 class Category(models.Model):
+    MAX_NAME_LENGTH = 128
+    
     name = models.CharField(max_length=MAX_NAME_LENGTH, unique=True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)

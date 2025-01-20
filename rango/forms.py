@@ -1,8 +1,8 @@
 from django import forms
-from rango.models import Page, Category, MAX_NAME_LENGTH
+from rango.models import Page, Category
 
 class CategoryForm(forms.ModelForm):
-    name = forms.CharField(max_length=MAX_NAME_LENGTH,
+    name = forms.CharField(max_length=Category.MAX_NAME_LENGTH,
                            help_text="Please enter the category name.")
     views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
     likes = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
